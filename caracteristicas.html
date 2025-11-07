@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AquaGuard - Características</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fade-in { 0% { opacity: 0; transform: translateY(-12px); } 100% { opacity: 1; transform: translateY(0); } }
+    .animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
+
+    /* Dark mode overrides (alineado con index) */
+    body.dark-mode { background-color: #0f172a; color: #e5e7eb; }
+    body.dark-mode .bg-white { background-color: #0b1220 !important; }
+    body.dark-mode .bg-blue-50 { background-color: #0b1220 !important; }
+    body.dark-mode .bg-blue-100 { background-color: #0b1220 !important; }
+    body.dark-mode .text-gray-800 { color: #f3f4f6 !important; }
+    body.dark-mode .text-gray-700 { color: #e5e7eb !important; }
+    body.dark-mode .text-gray-600 { color: #cbd5e1 !important; }
+    body.dark-mode .text-blue-900 { color: #dbeafe !important; }
+    body.dark-mode .text-blue-800 { color: #bfdbfe !important; }
+    body.dark-mode .text-blue-700 { color: #93c5fd !important; }
+    body.dark-mode .text-blue-600 { color: #93c5fd !important; }
+    body.dark-mode .border-gray-300 { border-color: #334155 !important; }
+    body.dark-mode a { color: inherit; }
+  </style>
+</head>
+<body class="bg-blue-50 text-gray-800 min-h-screen flex flex-col">
+
+  <header class="bg-white shadow-md border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <img src="logo aquaguard.png" alt="Logo AquaGuard" class="h-16 w-auto" />
+        <h1 class="text-2xl font-bold text-blue-600 group-hover:underline">AquaGuard</h1>
+      </a>
+      <nav class="flex items-center space-x-4">
+        <a href="caracteristicas.html" class="text-blue-600 font-semibold">Características</a>
+        <a href="nosotros.html" class="text-gray-600 hover:text-blue-500">¿Quiénes somos?</a>
+        <a href="index.html#contacto" class="text-gray-600 hover:text-blue-500">Contacto</a>
+        <button id="btn-toggle-tema" class="p-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-700" aria-label="Cambiar tema" title="Cambiar tema">
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.364 6.364l-1.414-1.414M8.05 8.05 6.636 6.636m10.728 0-1.414 1.414M8.05 15.95l-1.414 1.414"/>
+          </svg>
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <!-- Banner animado: mensajes rotativos -->
+    <section class="py-10">
+      <div class="max-w-7xl mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center text-blue-800 dark:text-blue-300 mb-6">¿Qué ofrece AquaGuard?</h3>
+        <div class="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-[#0b1220] dark:to-[#0b1220] rounded-2xl shadow-md border border-gray-200 dark:border-gray-700 p-6 sm:p-10">
+          <div class="relative h-96 overflow-hidden">
+            <div class="absolute inset-0 flex items-center justify-center text-center">
+              <!-- Slides -->
+              <div class="slide opacity-100 transition-opacity duration-700">
+                <div class="mx-auto mb-3 h-48 sm:h-64 w-full max-w-xl rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
+                  <img loading="lazy" src="caracteristicas/monitoreo.png" alt="Monitoreo Inteligente" class="w-full h-full object-cover" />
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 dark:text-blue-300">Monitoreo Inteligente</h3>
+                <p class="mt-1 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">Observa la calidad del agua en tiempo real con sensores precisos y tecnología IoT.</p>
+              </div>
+              <div class="slide opacity-0 absolute inset-0 transition-opacity duration-700">
+                <div class="mx-auto mb-3 h-48 sm:h-64 w-full max-w-xl rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
+                  <img loading="lazy" src="caracteristicas/alertas.png" alt="Alertas Instantáneas" class="w-full h-full object-cover" />
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 dark:text-blue-300">Alertas Instantáneas</h3>
+                <p class="mt-1 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">Notificaciones automáticas ante cualquier anomalía o riesgo sanitario.</p>
+              </div>
+              <div class="slide opacity-0 absolute inset-0 transition-opacity duration-700">
+                <div class="mx-auto mb-3 h-48 sm:h-64 w-full max-w-xl rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
+                  <img loading="lazy" src="caracteristicas/reporte.webp" alt="Análisis y Reportes" class="w-full h-full object-cover" />
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 dark:text-blue-300">Análisis y Reportes</h3>
+                <p class="mt-1 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">Historial de datos, gráficos y reportes automáticos para una gestión informada.</p>
+              </div>
+              <div class="slide opacity-0 absolute inset-0 transition-opacity duration-700">
+                <div class="mx-auto mb-3 h-48 sm:h-64 w-full max-w-xl rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
+                  <img loading="lazy" src="caracteristicas/acceso.jpg" alt="Acceso desde Cualquier Lugar" class="w-full h-full object-cover" />
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 dark:text-blue-300">Acceso desde Cualquier Lugar</h3>
+                <p class="mt-1 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">Plataforma web y móvil para controlar y revisar el sistema desde cualquier dispositivo.</p>
+              </div>
+              <div class="slide opacity-0 absolute inset-0 transition-opacity duration-700">
+                <div class="mx-auto mb-3 h-48 sm:h-64 w-full max-w-xl rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
+                  <img loading="lazy" src="caracteristicas/seguridad.jpg" alt="Seguridad y Fiabilidad" class="w-full h-full object-cover" />
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 dark:text-blue-300">Seguridad y Fiabilidad</h3>
+                <p class="mt-1 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">Datos protegidos y mediciones confiables para un control seguro y continuo.</p>
+              </div>
+              <div class="slide opacity-0 absolute inset-0 transition-opacity duration-700">
+                <div class="mx-auto mb-3 h-48 sm:h-64 w-full max-w-xl rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
+                  <img loading="lazy" src="caracteristicas/mantenimiento.jpg" alt="Mantenimiento Predictivo" class="w-full h-full object-cover" />
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 dark:text-blue-300">Mantenimiento Predictivo</h3>
+                <p class="mt-1 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">Detección temprana de fallos y programación preventiva para mayor eficiencia.</p>
+              </div>
+              <div class="slide opacity-0 absolute inset-0 transition-opacity duration-700">
+                <div class="mx-auto mb-3 h-48 sm:h-64 w-full max-w-xl rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
+                  <img loading="lazy" src="caracteristicas/wifi.webp" alt="Tecnología Sostenible" class="w-full h-full object-cover" />
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 dark:text-blue-300">Tecnología Sostenible</h3>
+                <p class="mt-1 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">Diseñada para contribuir al consumo responsable y la preservación del agua.</p>
+              </div>
+              <div class="slide opacity-0 absolute inset-0 transition-opacity duration-700">
+                <div class="mx-auto mb-3 h-48 sm:h-64 w-full max-w-xl rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow">
+                  <img loading="lazy" src="caracteristicas/comunitario.jpg" alt="Enfoque Comunitario" class="w-full h-full object-cover" />
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 dark:text-blue-300">Enfoque Comunitario</h3>
+                <p class="mt-1 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">Solución pensada para hogares, instituciones y comunidades.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Controles -->
+          <div class="flex items-center justify-center gap-3 mt-4">
+            <button id="prevSlide" class="px-3 py-1.5 text-sm rounded bg-white border border-gray-200 shadow hover:bg-gray-50 dark:bg-[#0b1220] dark:border-gray-600">‹</button>
+            <div id="dots" class="flex gap-2"></div>
+            <button id="nextSlide" class="px-3 py-1.5 text-sm rounded bg-white border border-gray-200 shadow hover:bg-gray-50 dark:bg-[#0b1220] dark:border-gray-600">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="componentes" class="py-10">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-2xl font-bold text-blue-800 dark:text-blue-300">Componentes del sistema</h2>
+        <p class="mt-1 text-gray-700 dark:text-gray-300">Principales dispositivos utilizados en AquaGuard.</p>
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div class="transform transition duration-500 hover:scale-105 hover:shadow-lg bg-white dark:bg-[#0b1220] border border-gray-200 dark:border-gray-700 rounded-xl p-4">
+            <img loading="lazy" src="caracteristicas/arduino.webp" alt="Arduino" class="w-full h-40 object-cover rounded-xl shadow-md" />
+            <h3 class="mt-3 font-semibold text-blue-800 dark:text-blue-300">Arduino</h3>
+            <p class="text-sm text-gray-700 dark:text-gray-300">Microcontrolador para integrar sensores y comunicaciones.</p>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105 hover:shadow-lg bg-white dark:bg-[#0b1220] border border-gray-200 dark:border-gray-700 rounded-xl p-4">
+            <img loading="lazy" src="caracteristicas/ph.png" alt="Sensor de pH" class="w-full h-40 object-cover rounded-xl shadow-md" />
+            <h3 class="mt-3 font-semibold text-blue-800 dark:text-blue-300">Sensor de pH</h3>
+            <p class="text-sm text-gray-700 dark:text-gray-300">Mide la acidez del agua para asegurar niveles seguros.</p>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105 hover:shadow-lg bg-white dark:bg-[#0b1220] border border-gray-200 dark:border-gray-700 rounded-xl p-4">
+            <img loading="lazy" src="caracteristicas/temperatura.png" alt="Sensor de temperatura" class="w-full h-40 object-cover rounded-xl shadow-md" />
+            <h3 class="mt-3 font-semibold text-blue-800 dark:text-blue-300">Sensor de temperatura</h3>
+            <p class="text-sm text-gray-700 dark:text-gray-300">Controla variaciones térmicas que afectan la calidad.</p>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105 hover:shadow-lg bg-white dark:bg-[#0b1220] border border-gray-200 dark:border-gray-700 rounded-xl p-4">
+            <img loading="lazy" src="caracteristicas/cloro.jpg" alt="Sensor de cloro" class="w-full h-40 object-cover rounded-xl shadow-md" />
+            <h3 class="mt-3 font-semibold text-blue-800 dark:text-blue-300">Sensor de cloro</h3>
+            <p class="text-sm text-gray-700 dark:text-gray-300">Verifica niveles de desinfección para consumo seguro.</p>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105 hover:shadow-lg bg-white dark:bg-[#0b1220] border border-gray-200 dark:border-gray-700 rounded-xl p-4">
+            <img loading="lazy" src="caracteristicas/humedad.png" alt="Sensor de humedad" class="w-full h-40 object-cover rounded-xl shadow-md" />
+            <h3 class="mt-3 font-semibold text-blue-800 dark:text-blue-300">Sensor de humedad</h3>
+            <p class="text-sm text-gray-700 dark:text-gray-300">Monitorea condiciones ambientales del entorno.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nuestro-proyecto" class="py-10">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-2xl font-bold text-blue-800 dark:text-blue-300">Nuestro Proyecto</h2>
+        <div class="mt-6 flex justify-center">
+          <img loading="lazy" src="rakiduam.png" alt="Nuestro Proyecto - Rakiduam" class="max-w-full h-auto rounded-xl shadow-md border border-gray-200 dark:border-gray-700" />
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Banner: rotación automática de slides
+      (function(){
+        const slides = Array.from(document.querySelectorAll('.slide'));
+        if (!slides.length) return;
+        let i = 0, timer;
+        const dots = document.getElementById('dots');
+        const prev = document.getElementById('prevSlide');
+        const next = document.getElementById('nextSlide');
+
+        // Crear dots
+        slides.forEach((_, idx) => {
+          const d = document.createElement('button');
+          d.className = 'w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600';
+          d.setAttribute('aria-label', 'Ir al slide ' + (idx+1));
+          d.addEventListener('click', () => go(idx, true));
+          dots.appendChild(d);
+        });
+
+        function render(){
+          slides.forEach((s, idx) => {
+            s.style.opacity = idx === i ? '1' : '0';
+            s.style.position = idx === i ? 'relative' : 'absolute';
+          });
+          Array.from(dots.children).forEach((d, idx) => {
+            d.className = 'w-2.5 h-2.5 rounded-full ' + (idx===i ? 'bg-blue-500' : 'bg-gray-300 dark:bg-gray-600');
+          });
+        }
+
+        function go(n, manual){
+          i = (n + slides.length) % slides.length;
+          render();
+          if (manual) restart();
+        }
+
+        function nextFn(){ go(i+1); }
+        function prevFn(){ go(i-1, true); }
+
+        function restart(){
+          clearInterval(timer);
+          timer = setInterval(nextFn, 3500);
+        }
+
+        prev && prev.addEventListener('click', prevFn);
+        next && next.addEventListener('click', () => go(i+1, true));
+
+        render();
+        timer = setInterval(nextFn, 3500);
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) clearInterval(timer); else restart();
+        });
+      })();
+    </script>
+  </main>
+
+  <footer class="bg-white text-center text-sm py-4 border-t mt-8">
+    2025 AquaGuard. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    // Tema claro/oscuro: init y toggle + iconos
+    function setThemeIcon(isDark) {
+      const sun = document.getElementById('icon-sun');
+      const moon = document.getElementById('icon-moon');
+      if (!sun || !moon) return;
+      sun.classList.toggle('hidden', isDark);
+      moon.classList.toggle('hidden', !isDark);
+    }
+
+    (function initTheme() {
+      try {
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.body.classList.add('dark-mode');
+        }
+      } catch (e) {}
+      setThemeIcon(document.body.classList.contains('dark-mode'));
+    })();
+
+    const btnToggleTema = document.getElementById('btn-toggle-tema');
+    if (btnToggleTema) {
+      btnToggleTema.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark-mode');
+        setThemeIcon(isDark);
+        try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (e) {}
+      });
+    }
+  </script>
+</body>
+</html>
